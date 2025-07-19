@@ -1,0 +1,259 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{793D5D17-1D41-474B-9B8A-81427FB35CC4}|Presentation\\ECommerceAPI.API\\ECommerceAPI.API.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\presentation\\ecommerceapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{793D5D17-1D41-474B-9B8A-81427FB35CC4}|Presentation\\ECommerceAPI.API\\ECommerceAPI.API.csproj|solutionrelative:presentation\\ecommerceapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\services\\storage\\local\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\services\\storage\\local\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\services\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\services\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\services\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\services\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\services\\storage\\azure\\azurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\services\\storage\\azure\\azurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\infrastructure\\ecommerceapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A864DB8C-80FE-4C55-A605-CB37320FAEFE}|Infrastructure\\ECommerceAPI.Infrastructure\\ECommerceAPI.Infrastructure.csproj|solutionrelative:infrastructure\\ecommerceapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{793D5D17-1D41-474B-9B8A-81427FB35CC4}|Presentation\\ECommerceAPI.API\\ECommerceAPI.API.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\presentation\\ecommerceapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{793D5D17-1D41-474B-9B8A-81427FB35CC4}|Presentation\\ECommerceAPI.API\\ECommerceAPI.API.csproj|solutionrelative:presentation\\ecommerceapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\core\\ecommerceapi.application\\abstractions\\storage\\istorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|solutionrelative:core\\ecommerceapi.application\\abstractions\\storage\\istorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\core\\ecommerceapi.application\\abstractions\\storage\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|solutionrelative:core\\ecommerceapi.application\\abstractions\\storage\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|c:\\users\\orhan\\masa\u00FCst\u00FC\\eticaretuygulamasi\\ecommerceapi\\core\\ecommerceapi.application\\abstractions\\storage\\azure\\iazurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DF7BD43-8692-4DA7-BFFC-5D765142968A}|Core\\ECommerceAPI.Application\\ECommerceAPI.Application.csproj|solutionrelative:core\\ecommerceapi.application\\abstractions\\storage\\azure\\iazurestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Storage.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Storage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Storage.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Storage.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Storage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T22:07:09.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\FileService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\FileService.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\FileService.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\FileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T22:03:03.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LocalStorage.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Local\\LocalStorage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Local\\LocalStorage.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Local\\LocalStorage.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Local\\LocalStorage.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwEAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T21:41:26.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AzureStorage.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Azure\\AzureStorage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Azure\\AzureStorage.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Azure\\AzureStorage.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\Azure\\AzureStorage.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T21:31:04.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAzureStorage.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\Azure\\IAzureStorage.cs",
+              "RelativeDocumentMoniker": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\Azure\\IAzureStorage.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\Azure\\IAzureStorage.cs",
+              "RelativeToolTip": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\Azure\\IAzureStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T21:30:30.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorageService.cs",
+              "RelativeDocumentMoniker": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorageService.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorageService.cs",
+              "RelativeToolTip": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:56:01.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\StorageService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\StorageService.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\StorageService.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\Services\\Storage\\StorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:43:56.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IStorage.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorage.cs",
+              "RelativeDocumentMoniker": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorage.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorage.cs",
+              "RelativeToolTip": "Core\\ECommerceAPI.Application\\Abstractions\\Storage\\IStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:41:00.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\ECommerceAPI.API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Presentation\\ECommerceAPI.API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAUwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:38:30.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ECommerceAPI.Infrastructure\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Infrastructure\\ECommerceAPI.Infrastructure\\ServiceRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\ECommerceAPI.Infrastructure\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:34:59.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\ECommerceAPI.API\\Program.cs",
+              "ToolTip": "C:\\Users\\orhan\\Masa\u00FCst\u00FC\\ETicaretUygulamasi\\ECommerceAPI\\Presentation\\ECommerceAPI.API\\Program.cs*",
+              "RelativeToolTip": "Presentation\\ECommerceAPI.API\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T20:34:49.127Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

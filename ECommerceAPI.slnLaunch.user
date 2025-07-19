@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
