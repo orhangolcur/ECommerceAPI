@@ -54,7 +54,7 @@ namespace ECommerceAPI.Infrastructure.Services.Storage.Azure
 
                 BlobClient blobClient = _blobContainerClient.GetBlobClient(fileNewName); // blobClient, dosyayı azure storage'a yüklemek için kullanılır
                 await blobClient.UploadAsync(file.OpenReadStream()); // dosyayı yükler
-                datas.Add((fileNewName, containerName)); // pathOrContainerName olarak containerName ve dosya adını ekliyoruz
+                datas.Add((fileNewName, $"{containerName}/{fileNewName}")); // pathOrContainerName olarak containerName ve dosya adını ekliyoruz
             }
             return datas;
         }

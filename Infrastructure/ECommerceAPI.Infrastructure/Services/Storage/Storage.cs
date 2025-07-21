@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Infrastructure.Services.Storage
 {
+    //Her storage da kullanılacak olan temel sınıf
     public class Storage
     {
         protected delegate bool HasFile(string pathorContainerName, string fileName);
