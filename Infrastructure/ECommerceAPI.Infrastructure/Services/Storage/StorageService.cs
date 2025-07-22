@@ -37,5 +37,6 @@ namespace ECommerceAPI.Infrastructure.Services.Storage
 
         public Task<List<(string fileName, string pathOrContainerName)>> UploadAsync(string pathOrContainerName, IFormFileCollection files)
             => _storage.UploadAsync(pathOrContainerName, files);
+
     }
 }
