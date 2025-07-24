@@ -1,16 +1,15 @@
 ﻿using ECommerceAPI.Domain.Entities;
 using ECommerceAPI.Domain.Entities.Comman;
+using ECommerceAPI.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using File = ECommerceAPI.Domain.Entities.File;
 
 namespace ECommerceAPI.Persistance.Contexts
 {
-    public class ECommerceAPIDbContext : DbContext
+    // IdentityDbContext'i ECommerceAPIDbContext'e vererek Identit mekanizmasının tablolarını da üretebiliriz.
+    public class ECommerceAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ECommerceAPIDbContext(DbContextOptions<ECommerceAPIDbContext> options) : base(options)
         {

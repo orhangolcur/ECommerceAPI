@@ -25,9 +25,11 @@ namespace ECommerceAPI.Application.Features.Commands.ProductImageFile.RemoveProd
 
         public async Task<RemoveProductImageCommandResponse> Handle(RemoveProductImageCommandRequest request, CancellationToken cancellationToken)
         {
+            // ProductImageFile'ı Product'tan silmek için Product'ı bulmamız gerekiyor.
             P.Product? product = await _productReadRepository.Table.Include(p => p.ProductImageFiles)
                 .FirstOrDefaultAsync(p => p.Id == Guid.Parse(request.Id));
 
+            // ProductImageFile'ı Product'tan silmek için ProductImageFile'ı bulmamız gerekiyor.
             P.ProductImageFile? productImageFile = product?.ProductImageFiles.FirstOrDefault(p => p.Id == Guid.Parse(request.ImageId));
 
             if (productImageFile != null)

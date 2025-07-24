@@ -28,6 +28,7 @@ namespace ECommerceAPI.Application.Features.Commands.ProductImageFile.UploadProd
         {
             List<(string fileName, string pathOrContainerName)> result = await _storageService.UploadAsync("photo-image", request.Files);
 
+            // Product'ı bulmamız gerekiyor. Çünkü ProductImageFile'ı Product'a ekleyeceğiz.
             P.Product product = await _productReadRepository.GetByIdAsync(request.Id);
 
             await _productImageFileWriteRepository.AddRangeAsync(result.Select(r => new P.ProductImageFile
