@@ -12,6 +12,7 @@ using ECommerceAPI.Application.RequestParameters;
 using ECommerceAPI.Application.ViewModels.Products;
 using ECommerceAPI.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -20,6 +21,7 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")] // artık bu controller'a ve bu controller altındaki tüm actionlara gelecek isteklerde yetkili mi değil mi bunu kontrol et demiş oluyoruz. Yetkiliyse 200, değilse 400 döner.
     public class ProductsController : ControllerBase
     {
 

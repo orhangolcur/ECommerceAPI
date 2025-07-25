@@ -8,7 +8,7 @@ using File = ECommerceAPI.Domain.Entities.File;
 
 namespace ECommerceAPI.Persistance.Contexts
 {
-    // IdentityDbContext'i ECommerceAPIDbContext'e vererek Identit mekanizmasının tablolarını da üretebiliriz.
+    // IdentityDbContext'i ECommerceAPIDbContext'e vererek Identity mekanizmasının tablolarını da üretebiliriz.
     public class ECommerceAPIDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ECommerceAPIDbContext(DbContextOptions<ECommerceAPIDbContext> options) : base(options)
