@@ -36,7 +36,9 @@ namespace ECommerceAPI.Application.Features.Commands.AppUser.LoginUser
             if (user == null)
                 throw new NotFoundUserException();
 
+            // Eğer kullanıcı bulunursa, şifresini kontrol et
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
+
             // Authentication başarılı
             if (result.Succeeded)
             {
