@@ -14,7 +14,6 @@ namespace ECommerceAPI.Application
         {
             
             services.AddMediatR(typeof(ServiceRegistration)); // bu assembly'deki(application) tüm MediatR handler'larını kaydeder. örneğin products için GetAllProductsQueryHandler gibi
-            services.AddHttpClient(); 
 
         }
     }

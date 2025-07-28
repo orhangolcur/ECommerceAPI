@@ -19,7 +19,7 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public Application.DTOs.Token CreateAccessToken(int minute)
+        public Application.DTOs.Token CreateAccessToken(int second)
         {
             Application.DTOs.Token token = new();
 
@@ -29,7 +29,7 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             //Tpkeni imzalamak için gerekli olan signing credentials'ı oluşturuyoruz
             SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256);
 
-            token.Expiration = DateTime.Now.AddMinutes(minute); //Token'ın geçerlilik süresi
+            token.Expiration = DateTime.Now.AddMinutes(second); //Token'ın geçerlilik süresi
 
             // Token ayarlarını yapıyoruz ve oluşturuyoruz
             JwtSecurityToken securityToken = new( 
