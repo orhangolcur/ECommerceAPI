@@ -3,19 +3,12 @@ using ECommerceAPI.Application.Abstractions.Token;
 using ECommerceAPI.Application.DTOs;
 using ECommerceAPI.Application.DTOs.Facebook;
 using ECommerceAPI.Application.Exceptions;
-using ECommerceAPI.Application.Features.Commands.AppUser.LoginUser;
 using ECommerceAPI.Domain.Entities.Identity;
 using Google.Apis.Auth;
-using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
+using System.Data.Entity;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistance.Services
 {
@@ -26,13 +19,15 @@ namespace ECommerceAPI.Persistance.Services
         readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
         readonly ITokenHandler _tokenHandler;
         readonly SignInManager<ECommerceAPI.Domain.Entities.Identity.AppUser> _signInManager;
-        public AuthService(IHttpClientFactory httpClientFactory, IConfiguration configuration, UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, SignInManager<AppUser> signInManager)
+        readonly IUserService _userService;
+        public AuthService(IHttpClientFactory httpClientFactory, IConfiguration configuration, UserManager<Domain.Entities.Identity.AppUser> userManager, ITokenHandler tokenHandler, SignInManager<AppUser> signInManager, IUserService userService)
         {
             _httpClient = httpClientFactory.CreateClient();
             _configuration = configuration;
             _userManager = userManager;
             _tokenHandler = tokenHandler;
             _signInManager = signInManager;
+            _userService = userService;
         }
 
         //Tekrar eden kodları buradaki fonksiyonda yazdık ve uyguladık
@@ -54,7 +49,7 @@ namespace ECommerceAPI.Persistance.Services
                         Id = Guid.NewGuid().ToString(),
                         Email = email,
                         UserName = email,
-                        NameSurname = name,
+                        NameSurname = name
                     };
                     // bu şekilde kullanıcıyı database'in aspnetusers kısmına kaydetmiş oluyoruz
                     var identityUser = await _userManager.CreateAsync(user);
@@ -69,6 +64,8 @@ namespace ECommerceAPI.Persistance.Services
                 // authentication başarılıysa token dönüyoruz
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
 
+                // normal tokeni oluşturduktan sonra burada refresh tokeni de oluşturuyoruz
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
                 return token;
             }
             throw new Exception("Invalid external authentication!");
@@ -139,9 +136,25 @@ namespace ECommerceAPI.Persistance.Services
             if (result.Succeeded)
             {
                 Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
                 return token;
             }
             throw new AutheticationErrorException(); // Authentication başarısız olduğunda bu şekilde hata da fırlatılabilir
+        }
+
+        public async Task<Token> RefreshTokenLoginAsync(string refreshToken)
+        {
+            AppUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+            if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
+            {
+                Token token = _tokenHandler.CreateAccessToken(15);
+                await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
+                return token;
+            }
+            else
+            {
+                throw new NotFoundUserException();
+            }
         }
     }
 }

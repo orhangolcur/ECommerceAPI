@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,7 +30,7 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             //Tpkeni imzalamak için gerekli olan signing credentials'ı oluşturuyoruz
             SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256);
 
-            token.Expiration = DateTime.Now.AddMinutes(second); //Token'ın geçerlilik süresi
+            token.Expiration = DateTime.Now.AddSeconds(second); //Token'ın geçerlilik süresi
 
             // Token ayarlarını yapıyoruz ve oluşturuyoruz
             JwtSecurityToken securityToken = new( 
@@ -44,7 +45,18 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken); // Token'ı yazıyoruz
 
+            // access token oluştururken aynı zamanda refresh token'ı da burada oluşturduk  
+            token.RefreshToken = CreateRefreshToken();
             return token;
+        }
+
+        public string CreateRefreshToken()
+        {
+            byte[] number = new byte[32];
+            // using ile nesnenin görevi bitince dispose edilir.
+            using RandomNumberGenerator random = RandomNumberGenerator.Create();
+            random.GetBytes(number);
+            return Convert.ToBase64String(number);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ECommerceAPI.Application.Exceptions
     public class UserCreateFailedException : Exception
     {
 
-        public UserCreateFailedException() : base("User creation failed.")
+        public UserCreateFailedException() : base("Kullanıcı oluşturulurken bir hata meydana geldi!")
         {
         }
         public UserCreateFailedException(string message) : base(message)
