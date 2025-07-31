@@ -1,10 +1,12 @@
 ﻿using ECommerceAPI.Application.Abstractions.Token;
+using ECommerceAPI.Domain.Entities.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,7 @@ namespace ECommerceAPI.Infrastructure.Services.Token
             _configuration = configuration;
         }
 
-        public Application.DTOs.Token CreateAccessToken(int second)
+        public Application.DTOs.Token CreateAccessToken(int second, AppUser user)
         {
             Application.DTOs.Token token = new();
 
@@ -38,7 +40,8 @@ namespace ECommerceAPI.Infrastructure.Services.Token
                 issuer: _configuration["Token:Issuer"],
                 expires: token.Expiration,
                 notBefore: DateTime.Now, //Token'ın geçerli olacağı zaman. örn 1 dk sonra geçerli olsun.
-                signingCredentials: signingCredentials // şifrelenmiş security key'i burada veriyoruz
+                signingCredentials: signingCredentials, // şifrelenmiş security key'i burada veriyoruz
+                claims: new List<Claim> { new(ClaimTypes.Name, user.UserName)}
             );
 
             //Token oluşturucu sınıfından bir örnek alalım 

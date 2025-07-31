@@ -6,8 +6,8 @@ using ECommerceAPI.Application.Exceptions;
 using ECommerceAPI.Domain.Entities.Identity;
 using Google.Apis.Auth;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Data.Entity;
 using System.Text.Json;
 
 namespace ECommerceAPI.Persistance.Services
@@ -62,7 +62,7 @@ namespace ECommerceAPI.Persistance.Services
                 await _userManager.AddLoginAsync(user, info);
 
                 // authentication başarılıysa token dönüyoruz
-                Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+                Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime, user);
 
                 // normal tokeni oluşturduktan sonra burada refresh tokeni de oluşturuyoruz
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
@@ -135,7 +135,7 @@ namespace ECommerceAPI.Persistance.Services
             // Authentication başarılı
             if (result.Succeeded)
             {
-                Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime);
+                Token token = _tokenHandler.CreateAccessToken(accessTokenLifeTime, user);
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 5);
                 return token;
             }
@@ -147,7 +147,7 @@ namespace ECommerceAPI.Persistance.Services
             AppUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
             if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
             {
-                Token token = _tokenHandler.CreateAccessToken(15);
+                Token token = _tokenHandler.CreateAccessToken(15, user);
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, 15);
                 return token;
             }
