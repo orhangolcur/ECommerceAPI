@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Application.Abstractions.Storage;
+using ECommerceAPI.Application.Features.Commands.ChangeShowcaseImage;
 using ECommerceAPI.Application.Features.Commands.Product.CreateProduct;
 using ECommerceAPI.Application.Features.Commands.Product.RemoveProduct;
 using ECommerceAPI.Application.Features.Commands.Product.UpdateProduct;
@@ -21,7 +22,6 @@ namespace ECommerceAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Admin")] // artık bu controller'a ve bu controller altındaki tüm actionlara gelecek isteklerde yetkili mi değil mi bunu kontrol et demiş oluyoruz. Yetkiliyse 200, değilse 400 döner.
     public class ProductsController : ControllerBase
     {
 
@@ -48,6 +48,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
 
@@ -56,6 +57,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPut]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Put([FromBody] UpdateProductCommandRequest updateProductCommandRequest)
         {
             UpdateProductCommandResponse response = await _mediator.Send(updateProductCommandRequest);
@@ -63,6 +65,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpDelete("{Id}")]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Delete([FromRoute] RemoveProductCommandRequest removeProductCommandRequest)
         {
             RemoveProductCommandResponse response = await _mediator.Send(removeProductCommandRequest);
@@ -70,6 +73,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpPost("[action]")] // bu şekilde action'ın parametresi route'da belirtilmiyorsa id query string olarak gelir. örn: /api/products/upload?id=1
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Upload([FromQuery] UploadProductImageCommandRequest uploadProductImageCommandRequest)
         {
             uploadProductImageCommandRequest.Files = Request.Form.Files;
@@ -78,6 +82,7 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet("[action]/{Id}")] // Bu şekilde action'ın parametresi route'da belirtiliyorsa id route parametresi(route data) olarak gelir. örn: /api/products/getproductimages/1
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> GetProductImages([FromRoute] GetProductImagesQueryRequest getProductImagesQueryRequest)
         {
             List<GetProductImagesQueryResponse> response = await _mediator.Send(getProductImagesQueryRequest);
@@ -87,11 +92,20 @@ namespace ECommerceAPI.API.Controllers
         //ne geleceği belliyse route data olarak kullanmak daha mantıklı ama gelecek veri opsional veya değişkense ise query string olarak kullanmak daha mantıklı
 
         [HttpDelete("[action]/{Id}")] // client tarafındaki delete metodu sadece 1 tane id parametresi aldığı için burada product'ın id'sini route'dan alıyoruz image id'sini ise query string olarak alıyoruz.
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> DeleteProductImage([FromRoute]RemoveProductImageCommandRequest removeProductImageCommandRequest, [FromQuery] string imageId)
         {
             removeProductImageCommandRequest.ImageId = imageId;
             RemoveProductImageCommandResponse response = await _mediator.Send(removeProductImageCommandRequest);
             return Ok();
+        }
+
+        [HttpGet("[action]")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        public async Task<IActionResult> ChangeShowCaseImage([FromQuery]ChangeShowcaseImageCommandRequest changeShowcaseImageCommandRequest)
+        {
+            ChangeShowcaseImageCommandResponse response = await _mediator.Send(changeShowcaseImageCommandRequest);
+            return Ok(response);
         }
     }
 }
