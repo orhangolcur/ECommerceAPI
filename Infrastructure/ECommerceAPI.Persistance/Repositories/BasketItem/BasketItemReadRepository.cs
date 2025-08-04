@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceAPI.Persistance.Repositories
 {
-    public class CustomerWriteRepository : WriteRepository<Customer>, ICustomerWriteRepository
+    public class BasketItemReadRepository : ReadRepository<BasketItem>, IBasketItemReadRepository
     {
-        public CustomerWriteRepository(ECommerceAPIDbContext context) : base(context)
+        public BasketItemReadRepository(ECommerceAPIDbContext context) : base(context)
         {
         }
     }

@@ -25,6 +25,8 @@ builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddSignalRServices();
 
+builder.Services.AddHttpContextAccessor(); //Client'dan gelen request neticesinde oluþturulan HttpContext nesnesine katmanlardaki classlar üzerinde(business logic) eriþebilmemizi saðlayan bir servistir.
+
 //builder.Services.AddStorage<LocalStorage>(); // LocalStorage'ý DI Container'a ekliyoruz
 builder.Services.AddStorage<AzureStorage>();
 

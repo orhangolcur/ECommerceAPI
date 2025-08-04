@@ -20,7 +20,21 @@ namespace ECommerceAPI.Persistance.Contexts
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<File> Files { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
 
+        // 1 e 1 ilişkiyi burada bu şekilde belirtiyoruz
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Order>()
+                .HasKey(b => b.Id);
+
+            builder.Entity<Basket>()
+                .HasOne(b => b.Order)
+                .WithOne(o => o.Basket)
+                .HasForeignKey<Order>(b => b.Id);
+            base.OnModelCreating(builder); //IdentityDbContext'i kullanıyorsak bunu da burada kullanmamız gerekiyor
+        }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
