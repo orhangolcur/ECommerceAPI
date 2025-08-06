@@ -10,6 +10,6 @@ namespace ECommerceAPI.Domain.Entities
     public class Customer : BaseEntity
     {
         public string Name { get; set; }
-        ICollection<Order> Orders { get; set; }
+        //ICollection<Order> Orders { get; set; }
     }
 }
