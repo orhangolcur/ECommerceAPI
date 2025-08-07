@@ -16,6 +16,7 @@ namespace ECommerceAPI.Persistence
         {
             services.AddDbContext<ECommerceAPIDbContext>(options =>
                 options.UseNpgsql(Configuration.ConnectionString));
+
             services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.Password.RequiredLength = 3;
