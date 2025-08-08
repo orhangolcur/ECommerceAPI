@@ -18,8 +18,8 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetAllOrders
             var data = await _orderService.GetAllOrdersAsync(request.Page, request.Size);
             return new()
             {
-                TotalOrderCount = data.Count,
-                Orders = data.ToList()
+                TotalOrderCount = data.TotalOrderCount,
+                Orders = data.Orders
             };
         }
     }
