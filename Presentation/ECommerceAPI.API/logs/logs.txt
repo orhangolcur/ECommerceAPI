@@ -47543,3 +47543,543 @@ Content-Type: application/json; charset=utf-8
 ResponseBody: {"address":"Yenibağlar mahallesi","basketItems":[{"name":"ürün3","price":3,"quantity":4},{"name":"ürün2","price":2,"quantity":1},{"name":"ürün4","price":4,"quantity":3},{"name":"ürün1","price":1,"quantity":5}],"createdDate":"2025-08-09T10:28:24.975172Z","description":"Güzel bir sipariş","id":"5aec2282-86f9-463b-99a2-18d330c68b6c","orderCode":"682779104367"}
 Duration: 35,8754
 2025-08-09 13:43:10.364 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/orders/5aec2282-86f9-463b-99a2-18d330c68b6c - 200 null application/json; charset=utf-8 40.577ms
+2025-08-09 15:25:04.656 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 15:25:04.919 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 15:25:04.921 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 15:25:04.983 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 15:25:04.985 +03:00 [INF] Hosting environment: Development
+2025-08-09 15:25:04.988 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 15:25:05.802 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 15:25:05.961 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 164.7585ms
+2025-08-09 15:25:05.990 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 15:25:06.014 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 15:25:06.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 30.3886ms
+2025-08-09 15:25:06.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.2992ms
+2025-08-09 15:25:06.142 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 15:25:06.188 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.8498ms
+2025-08-09 15:25:13.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 15:25:13.760 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:25:13.790 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 15:25:24.868 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 11071.4463ms
+2025-08-09 15:25:24.874 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:25:24.925 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 11182,8392
+2025-08-09 15:25:24.937 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [FR4P281CA0026.DEUP281.PROD.OUTLOOK.COM 2025-08-09T12:25:24.688Z 08DDD7173BE1439D]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 39
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 15:25:25.013 +03:00 [ERR] The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [FR4P281CA0026.DEUP281.PROD.OUTLOOK.COM 2025-08-09T12:25:24.688Z 08DDD7173BE1439D]
+2025-08-09 15:25:25.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 11295.6058ms
+2025-08-09 15:27:16.011 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 15:27:16.272 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 15:27:16.274 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 15:27:16.346 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 15:27:16.348 +03:00 [INF] Hosting environment: Development
+2025-08-09 15:27:16.350 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 15:27:17.266 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 15:27:17.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 275.2706ms
+2025-08-09 15:27:17.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 15:27:17.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 15:27:17.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 22.0083ms
+2025-08-09 15:27:17.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.9347ms
+2025-08-09 15:27:17.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 15:27:17.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.5706ms
+2025-08-09 15:27:22.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 15:27:22.288 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:27:22.311 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 15:27:33.471 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 11149.8089ms
+2025-08-09 15:27:33.475 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:27:33.515 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 11238,5224
+2025-08-09 15:27:33.524 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR06CA0118.eurprd06.prod.outlook.com 2025-08-09T12:27:33.275Z 08DDD7325B8538B9]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 39
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 15:27:33.560 +03:00 [ERR] The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR06CA0118.eurprd06.prod.outlook.com 2025-08-09T12:27:33.275Z 08DDD7325B8538B9]
+2025-08-09 15:27:33.568 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 11310.6366ms
+2025-08-09 15:35:03.750 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 15:35:03.988 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 15:35:03.992 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 15:35:04.054 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 15:35:04.056 +03:00 [INF] Hosting environment: Development
+2025-08-09 15:35:04.058 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 15:35:04.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 15:35:04.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 210.366ms
+2025-08-09 15:35:04.954 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 15:35:04.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 12.5235ms
+2025-08-09 15:35:04.967 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 15:35:05.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.5499ms
+2025-08-09 15:35:05.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 15:35:05.117 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.0111ms
+2025-08-09 15:35:10.043 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 15:35:10.085 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:35:10.118 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 15:35:21.235 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 11111.0668ms
+2025-08-09 15:35:21.238 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:35:21.283 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 11214,0132
+2025-08-09 15:35:21.294 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR07CA0245.eurprd07.prod.outlook.com 2025-08-09T12:35:21.070Z 08DDD6CF42004D5A]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 40
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 15:35:21.344 +03:00 [ERR] The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR07CA0245.eurprd07.prod.outlook.com 2025-08-09T12:35:21.070Z 08DDD6CF42004D5A]
+2025-08-09 15:35:21.352 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 11309.958ms
+2025-08-09 15:36:50.063 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 15:36:50.298 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 15:36:50.300 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 15:36:50.358 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 15:36:50.360 +03:00 [INF] Hosting environment: Development
+2025-08-09 15:36:50.361 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 15:36:51.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 15:36:51.411 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 249.0046ms
+2025-08-09 15:36:51.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 15:36:51.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 15:36:51.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 13.0229ms
+2025-08-09 15:36:51.509 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.7701ms
+2025-08-09 15:36:51.574 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 15:36:51.617 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.4315ms
+2025-08-09 15:36:56.256 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 15:36:56.286 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:36:56.308 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 15:37:07.429 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 11113.0907ms
+2025-08-09 15:37:07.431 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:37:07.473 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 11198,6528
+2025-08-09 15:37:07.482 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR07CA0143.eurprd07.prod.outlook.com 2025-08-09T12:37:07.265Z 08DDD6AABB099FA8]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 40
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 15:37:07.518 +03:00 [ERR] The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR07CA0143.eurprd07.prod.outlook.com 2025-08-09T12:37:07.265Z 08DDD6AABB099FA8]
+2025-08-09 15:37:07.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 11276.3234ms
+2025-08-09 15:38:29.945 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 15:38:30.253 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 15:38:30.255 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 15:38:30.318 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 15:38:30.320 +03:00 [INF] Hosting environment: Development
+2025-08-09 15:38:30.322 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 15:38:31.077 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 15:38:31.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 280.7452ms
+2025-08-09 15:38:31.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 15:38:31.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 15:38:31.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 19.132ms
+2025-08-09 15:38:31.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.4491ms
+2025-08-09 15:38:31.497 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 15:38:31.531 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4184ms
+2025-08-09 15:38:36.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 15:38:36.145 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:38:36.169 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 15:38:47.574 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 11399.4462ms
+2025-08-09 15:38:47.578 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 15:38:47.618 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 11484,0647
+2025-08-09 15:38:47.626 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR03CA0070.eurprd03.prod.outlook.com 2025-08-09T12:38:47.420Z 08DDD7415BDFF16D]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 40
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 15:38:47.672 +03:00 [ERR] The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, basic authentication is disabled. [VI1PR03CA0070.eurprd03.prod.outlook.com 2025-08-09T12:38:47.420Z 08DDD7415BDFF16D]
+2025-08-09 15:38:47.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 11558.1891ms
+2025-08-09 16:07:49.939 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 16:07:50.167 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 16:07:50.169 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 16:07:50.226 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 16:07:50.228 +03:00 [INF] Hosting environment: Development
+2025-08-09 16:07:50.230 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 16:07:51.054 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 16:07:51.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 249.7353ms
+2025-08-09 16:07:51.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 16:07:51.320 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 19.9643ms
+2025-08-09 16:07:51.322 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 16:07:51.388 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.2195ms
+2025-08-09 16:07:51.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 16:07:51.479 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.9308ms
+2025-08-09 16:34:23.147 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 16:34:23.502 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 16:34:23.504 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 16:34:23.612 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 16:34:23.614 +03:00 [INF] Hosting environment: Development
+2025-08-09 16:34:23.615 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 16:34:24.734 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 16:34:24.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 252.2131ms
+2025-08-09 16:34:24.984 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 16:34:25.003 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 16:34:25.004 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 19.5482ms
+2025-08-09 16:34:25.077 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.6914ms
+2025-08-09 16:34:25.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 16:34:25.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.1199ms
+2025-08-09 16:34:29.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 16:34:29.993 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:34:30.026 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 16:34:30.986 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 954.5749ms
+2025-08-09 16:34:30.991 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:34:31.034 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 1058,8353
+2025-08-09 16:34:31.043 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: Failure sending mail.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The connection was closed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLinesAsyncResult.ProcessRead()
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLinesAsyncResult.Read()
+   at System.Net.Mail.CheckCommand.BeginSend(SmtpConnection conn, AsyncCallback callback, Object state)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFrom()
+   at System.Net.Mail.SmtpTransport.BeginSendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, AsyncCallback callback, Object state)
+   at System.Net.Mail.SmtpClient.SendMailAsync(Object state)
+   at System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String[] tos, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 40
+   at ECommerceAPI.Infrastructure.Services.MailService.SendMessageAsync(String to, String subject, String body, Boolean isBodyHtml) in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Infrastructure\ECommerceAPI.Infrastructure\Services\MailService.cs:line 19
+   at ECommerceAPI.API.Controllers.UsersController.ExampleMailService() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Controllers\UsersController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Program.<>c.<<<Main>$>b__0_6>d.MoveNext() in C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API\Program.cs:line 136
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-09 16:34:31.130 +03:00 [ERR] Failure sending mail.
+2025-08-09 16:34:31.142 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 500 null application/json 1189.5058ms
+2025-08-09 16:36:44.463 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 16:36:44.730 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 16:36:44.732 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 16:36:44.794 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 16:36:44.796 +03:00 [INF] Hosting environment: Development
+2025-08-09 16:36:44.798 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 16:36:45.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 16:36:45.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 212.3496ms
+2025-08-09 16:36:45.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 16:36:45.610 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 16:36:45.614 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 16.7479ms
+2025-08-09 16:36:45.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.9714ms
+2025-08-09 16:36:45.736 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 16:36:45.776 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.6328ms
+2025-08-09 16:36:50.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 16:36:50.845 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:36:50.874 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 16:36:52.935 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-08-09 16:36:52.944 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 2060.1678ms
+2025-08-09 16:36:52.947 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:36:52.954 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 2125,3037
+2025-08-09 16:36:52.960 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 200 0 null 2152.7579ms
+2025-08-09 16:40:39.309 +03:00 [INF] User profile is available. Using 'C:\Users\orhan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-09 16:40:39.548 +03:00 [INF] Now listening on: https://localhost:7048
+2025-08-09 16:40:39.549 +03:00 [INF] Now listening on: http://localhost:5298
+2025-08-09 16:40:39.622 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-09 16:40:39.623 +03:00 [INF] Hosting environment: Development
+2025-08-09 16:40:39.625 +03:00 [INF] Content root path: C:\Users\orhan\Masaüstü\ETicaretUygulamasi\ECommerceAPI\Presentation\ECommerceAPI.API
+2025-08-09 16:40:40.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/index.html - null null
+2025-08-09 16:40:40.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/index.html - 200 null text/html;charset=utf-8 316.3475ms
+2025-08-09 16:40:40.569 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-09 16:40:40.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/_vs/browserLink - null null
+2025-08-09 16:40:40.595 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 25.9338ms
+2025-08-09 16:40:40.639 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.2587ms
+2025-08-09 16:40:40.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - null null
+2025-08-09 16:40:40.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.2908ms
+2025-08-09 16:40:45.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7048/api/Users - null null
+2025-08-09 16:40:45.399 +03:00 [INF] Executing endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:40:45.428 +03:00 [INF] Route matched with {action = "ExampleMailService", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ExampleMailService() on controller ECommerceAPI.API.Controllers.UsersController (ECommerceAPI.API).
+2025-08-09 16:40:47.036 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-08-09 16:40:47.044 +03:00 [INF] Executed action ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API) in 1608.6365ms
+2025-08-09 16:40:47.047 +03:00 [INF] Executed endpoint 'ECommerceAPI.API.Controllers.UsersController.ExampleMailService (ECommerceAPI.API)'
+2025-08-09 16:40:47.049 +03:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7048
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Duration: 1662,5431
+2025-08-09 16:40:47.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7048/api/Users - 200 0 null 1686.3014ms
