@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Application.Features.Commands.Order.CreateOrder;
+﻿using ECommerceAPI.Application.Features.Commands.Order.CompleteOrder;
+using ECommerceAPI.Application.Features.Commands.Order.CreateOrder;
 using ECommerceAPI.Application.Features.Queries.Order.GetAllOrders;
 using ECommerceAPI.Application.Features.Queries.Order.GetOrderById;
 using MediatR;
@@ -21,25 +22,32 @@ namespace ECommerceAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllOrders([FromQuery]GetAllOrdersQueryRequest getAllOrdersQueryRequest)
+        public async Task<ActionResult> GetAllOrders([FromQuery]GetAllOrdersQueryRequest getAllOrdersQueryRequest)
         {
             GetAllOrdersQueryResponse response = await _mediator.Send(getAllOrdersQueryRequest);
             return Ok(response);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById([FromRoute] GetOrderByIdQueryRequest getOrderByIdQueryRequest)
+        public async Task<ActionResult> GetOrderById([FromRoute] GetOrderByIdQueryRequest getOrderByIdQueryRequest)
         {
             GetOrderByIdQueryResponse response = await _mediator.Send(getOrderByIdQueryRequest);
             return Ok(response);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrder(CreateOrderCommandRequest createOrderCommandRequest)
+        public async Task<ActionResult> CreateOrder(CreateOrderCommandRequest createOrderCommandRequest)
         {
             CreateOrderCommandResponse response = await _mediator.Send(createOrderCommandRequest);
             return Ok(response);
         }
+
+        [HttpGet("complete-order/{Id}")]
+        public async Task<ActionResult> CompleteOrder([FromRoute] CompleteOrderCommandRequest completeOrderCommandRequest)
+        {
+            CompleteOrderCommandResponse response = await _mediator.Send(completeOrderCommandRequest);
+            return Ok(response);
+        } 
 
     }
 }

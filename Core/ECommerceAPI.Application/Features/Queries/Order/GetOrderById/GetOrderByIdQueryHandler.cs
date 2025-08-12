@@ -27,7 +27,8 @@ namespace ECommerceAPI.Application.Features.Queries.Order.GetOrderById
                 OrderCode = data.OrderCode,
                 CreatedDate = data.CreatedDate,
                 Description = data.Description,
-                BasketItems = data.BasketItems
+                BasketItems = data.BasketItems,
+                Completed = data.Completed
             };
         }
     }

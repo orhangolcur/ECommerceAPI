@@ -75,6 +75,29 @@ namespace ECommerceAPI.Persistance.Migrations
                     b.ToTable("BasketItems");
                 });
 
+            modelBuilder.Entity("ECommerceAPI.Domain.Entities.CompletedOrder", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("CompletedOrder");
+                });
+
             modelBuilder.Entity("ECommerceAPI.Domain.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
@@ -460,6 +483,17 @@ namespace ECommerceAPI.Persistance.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ECommerceAPI.Domain.Entities.CompletedOrder", b =>
+                {
+                    b.HasOne("ECommerceAPI.Domain.Entities.Order", "Order")
+                        .WithOne("CompletedOrder")
+                        .HasForeignKey("ECommerceAPI.Domain.Entities.CompletedOrder", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
             modelBuilder.Entity("ECommerceAPI.Domain.Entities.Order", b =>
                 {
                     b.HasOne("ECommerceAPI.Domain.Entities.Basket", "Basket")
@@ -548,6 +582,12 @@ namespace ECommerceAPI.Persistance.Migrations
             modelBuilder.Entity("ECommerceAPI.Domain.Entities.Identity.AppUser", b =>
                 {
                     b.Navigation("Baskets");
+                });
+
+            modelBuilder.Entity("ECommerceAPI.Domain.Entities.Order", b =>
+                {
+                    b.Navigation("CompletedOrder")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ECommerceAPI.Domain.Entities.Product", b =>
